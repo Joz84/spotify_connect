@@ -9,13 +9,9 @@ class OmniauthCallbacksController < Devise::OmniauthCallbacksController
              redirect_to new_user_registration_url
         end
     end
-
-    def passthru
-        raise
-    end
  
-     def failure
+    def failure
          flash[:error] = 'There was a problem signing you in. Please register or try signing in later.'
          redirect_to new_user_registration_url
-     end
+    end
  end
